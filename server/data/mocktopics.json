@@ -1,0 +1,22 @@
+[
+  {
+    "topic_name": "room.creation",
+    "facts_url": "http://combo.example.com/topics/room.creation/facts",
+    "subscription_url": "http://combo.example.com/topics/room.creation/subscriptions"
+  },
+  {
+    "topic_name": "door.creation",
+    "facts_url": "http://combo.example.com/topics/room.creation/facts",
+    "subscription_url": "http://combo.example.com/topics/door.creation/subscriptions"
+  },
+  {
+    "topic_name": "room.deletion",
+    "facts_url": "http://combo.example.com/topics/room.creation/facts",
+    "subscription_url": "http://combo.example.com/topics/room.deletion/subscriptions"
+  },
+  {
+    "topic_name": "door.deletion",
+    "facts_url": "http://combo.example.com/topics/room.creation/facts",
+    "subscription_url": "http://combo.example.com/topics/door.deletion/subscriptions"
+  }
+]
