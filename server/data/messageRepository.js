@@ -1,12 +1,13 @@
 (function (exports) {
 
+    var _ = require('lodash');
     var mockMessageData = require('../data/mockMessages.json');
 
     var data = [];
 
     exports.getInitialMessages = function (numberOfMessages) {
 
-        // Get sample of 10 data point
+        // Get sample of numberOfMessages data points
         data =  _.sample(mockMessageData, numberOfMessages)
             .map(function (message) {
                 message.time_sent = (new Date()).toISOString();
