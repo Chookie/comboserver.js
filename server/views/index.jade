@@ -1,5 +1,10 @@
-extends layout
+extends ../includes/layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href='/') comboserver.js
+    section.content
+        div(ng-view)
+    p= mockData

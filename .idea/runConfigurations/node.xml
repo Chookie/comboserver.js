@@ -3,7 +3,11 @@
     <envs>
       <env name="DEBUG" value="comboserver" />
     </envs>
-    <browser url="http://localhost:3000/" />
+    <browser start="true" with-js-debugger="true" url="http://localhost:3000/" />
+    <RunnerSettings RunnerId="Basic" />
+    <RunnerSettings RunnerId="debuggableProgram" />
+    <ConfigurationWrapper RunnerId="Basic" />
+    <ConfigurationWrapper RunnerId="debuggableProgram" />
     <method />
   </configuration>
 </component>
