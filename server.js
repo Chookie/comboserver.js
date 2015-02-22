@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var logger = require('morgan');  // Express logger
+var _ = require('lodash');
 var mockTopicData = require('./server/data/mocktopics.json');
-var mockMessageData = require('./server/data/mockMessages.json');
+var socketServer = require('./server/socket/socketServer.js');
 
 var app = express();
 
@@ -21,9 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/topics', function (req, res) {
    res.send(mockTopicData);
-});
-app.get('/messages', function (req, res) {
-    res.send(mockMessageData);
 });
 
 /*app.post('/topics/:topic_name/subscriptions', function (req, res) {
@@ -51,5 +49,11 @@ app.get('*', function (req, res) {
 
 var env = process.env.DEBUG_ENV = process.env.DEBUG_ENV || 'development';
 var port = parseInt(process.env.PORT, 10) || 3000;
-app.listen(port);
-console.log("Listening on port " + port + " in " + env + " mode");
+
+var http = require('http');
+var server = http.createServer(app);
+server.listen(3000, function (){
+    console.log("Listening on port " + port + " in " + env + " mode");
+});
+
+socketServer.init(server);
