@@ -1,0 +1,11 @@
+.panel.panel-primary
+    .panel-heading.text.left Lastest {{ topics.length }} Messages
+    .panel-body
+        .row
+            h4.col-md-2 Topic
+            h4.col-md-3 Sent
+            h4.col-md-7 Message
+        .row(ng-repeat="message in messages")
+            .col-md-2 {{ message.topic_name }}
+            .col-md-3 {{ message.time_sent }}
+            .col-md-7 {{ message.message }}

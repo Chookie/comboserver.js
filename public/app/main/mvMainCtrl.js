@@ -1,6 +1,19 @@
 angular.module('app')
-    .controller('mvMainCtrl', ['$scope',
-        function ($scope) {
-            $scope.topics = [{"topic" : "topic 1"},{"topic" : "topic 2"}];
+    .controller('mvMainCtrl', ['$scope', '$http',
+        function ($scope,$http) {
+
+            $http.get('/topics')
+                .then(function (result) {
+                    $scope.topics = result.data;
+                }, function (err) {
+                    console.log(err);
+                });
+
+            $http.get('/messages')
+                .then(function (result) {
+                    $scope.messages = result.data;
+                }, function (err) {
+                    console.log(err);
+                });
         }
 ]);

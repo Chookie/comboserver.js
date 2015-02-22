@@ -1,0 +1,36 @@
+[
+  {
+    "topic_name": "room.creation",
+    "time_sent": "2015-02-23T18:25:43.511Z",
+    "message": {
+      "creationid": "1234",
+      "direction": "[0,0]",
+      "lastCoordinates": "[0,0]"
+    }
+  },
+  {
+    "topic_name": "door.creation",
+    "time_sent": "2015-02-23T18:26:22.432Z",
+    "message": {
+      "doorNumber": "11"
+    }
+  },
+  {
+    "topic_name": "door.deletion",
+    "time_sent": "2015-02-23T18:27:22.432Z",
+    "message": {
+      "doorNumber": "12"
+      "doorColour": "Red"
+    }
+  },
+  {
+    "topic_name": "room.deletion",
+    "time_sent": "2015-02-23T18:29:22.432Z",
+    "message": {
+      "deletionid": "1234",
+      "direction": "[0,0]",
+      "lastCoordinates": "[0,0]"
+      "roomColour": "Blue"
+    }
+  }
+]

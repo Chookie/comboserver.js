@@ -3,6 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var logger = require('morgan');  // Express logger
 var mockTopicData = require('./server/data/mocktopics.json');
+var mockMessageData = require('./server/data/mockMessages.json');
 
 var app = express();
 
@@ -20,6 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/topics', function (req, res) {
    res.send(mockTopicData);
+});
+app.get('/messages', function (req, res) {
+    res.send(mockMessageData);
 });
 
 /*app.post('/topics/:topic_name/subscriptions', function (req, res) {

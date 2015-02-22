@@ -1,5 +1,11 @@
 .panel.panel-primary
     .panel-heading.text.left Topics
     .panel-body
+        .row.header
+            h4.col-md-2 Topic
+            h4.col-md-5 Message
+            h4.col-md-5 Subscription URL
         .row(ng-repeat="topic in topics")
-            .col-lg-12 {{ topic }}
+            .col-md-2 {{ topic.topic_name }}
+            .col-md-5 {{ topic.facts_url }}
+            .col-md-5 {{ topic.subscription_url }}
